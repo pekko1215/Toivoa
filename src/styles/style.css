@@ -1,0 +1,281 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/* Material iconsを利用する */
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* 推奨サイズ */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+
+    /* WebKitブラウザサポート */
+    -webkit-font-smoothing: antialiased;
+    /* Chrome、Safariサポート */
+    text-rendering: optimizeLegibility;
+
+    /* Firefoxサポート */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* IEサポート */
+    font-feature-settings: 'liga';
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    cursor: default;
+    overflow: hidden;
+}
+
+
+body {
+    background: rgb(245,245,245);
+    color: black;
+}
+
+.title {
+    height: 20px;
+    background-color: #89c6df;
+    width: 100%;
+    border-spacing: 0;
+}
+
+.btn {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    font-size: 10px;
+    border-radius: 2px;
+}
+
+.closer {
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.closer:hover:after {
+    content: ']';
+    font-size: 13px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    height: 30px;
+}
+
+.closer:hover:before {
+    content: '[';
+    font-size: 13px;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    height: 30px;
+}
+
+
+.title-bar {
+    -webkit-app-region: drag;
+    /* ドラッグ可能に */
+    /* ドラッグはテキスト選択と競合するので禁止 */
+    height: 100%;
+    width: 100%;
+    float: right;
+}
+
+.play-controller {
+    display: table;
+    width: 100%;
+}
+
+.toleft {
+    width: 20%;
+    display: table-cell;
+    text-align: right;
+}
+
+.toleft-icon {
+    font-size: 50px;
+    color:#b55050;
+}
+
+.musicname {
+    width: 60%;
+    display: table-cell;
+    height: 25px;
+    top: 32px;
+    color: black;
+    border-radius: 8px;
+}
+
+#title {
+    text-align: center;
+    width: 172px;
+    position: absolute;
+    margin-top: 9px;
+    background-color: #e6e6e6;
+    -webkit-user-select: none;
+    padding: 4px;
+    cursor: default;
+    border-radius:13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.toright {
+    width: 20%;
+    display: table-cell;
+    font-size: 16px;
+}
+
+.toright-icon {
+    color:#b55050;
+    font-size: 50px;
+}
+
+.toleft-icon:hover {
+    color:#e49191;
+    cursor: pointer;
+}
+
+.toright-icon:hover {
+    color:#e49191;
+    cursor: pointer;
+}
+
+.timerwrap {
+    margin-left:5px;
+    margin-right:5px;
+}
+
+#timerange {
+    -webkit-appearance: none;
+    margin: 14px 0;
+    width: 100%;
+}
+
+#timerange:focus {
+    outline: none;
+}
+#timerange::-webkit-slider-runnable-track {
+    background: red;
+}
+
+#timerange::-webkit-slider-runnable-track {
+    cursor: pointer;
+    background: red;
+    border-radius: 1.3px;
+    height: 4px;
+    width: 100%;
+}
+#timerange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #555555;
+    border: none;
+    /*border-radius: 7px;*/
+    cursor: pointer;
+    height: 16px;
+    margin-top: -7px;
+    width: 12px;
+}
+
+.buttom-bar{
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.list-button-wrap{
+    float:right;
+}
+
+#list-button{
+    top: 6px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+#list-button:hover:before{
+    content:'[';
+    font-size:13px;
+    position: absolute;
+    left: -2px;
+    top: 1px;
+}
+#list-button:hover:after{
+    content:']';
+    font-size:13px;
+    position: absolute;
+    right: 2px;
+    top: 1px;
+}
+
+.time-numer{
+    text-align: center;
+    color:gray;
+    cursor: default;
+}
+
+#play-controller{
+    margin-top:22px;
+}
+#playlist_table{
+    font-size:8pt;
+    width:100%;
+    table-layout: fixed;
+    border-spacing: 0;
+    background-color:rgb(217, 254, 255);
+}
+#playlist_table > tbody > tr > td{
+    font-size:7pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#playlist_table > tbody > tr:hover{
+    background-color:rgb(243, 243, 197);
+    color:black;
+}
+
+#playlist_table > tbody{
+    background-color:rgb(150, 206, 208);
+}
+
+#playlist-container{
+    top: 161px;
+    position: absolute;
+    height: 239px;
+    background: rgb(150, 206, 208);
+}
+
+.music-table-name{
+    width:60%;
+}
+
+.music-table-path{
+    width:30%;
+}
+
+.music-table-length{
+    width:10%;
+}
+
+#playlist_table > tbody{
+    overflow-x:hidden;
+    overflow-y:scroll;
+}

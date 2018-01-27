@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<script src="./../script/animation.js"></script>
+	<script src="./../script/toivoa.js"></script>
+	<title></title>
+</head>
+<body>
+	<table class="title">
+		<tr>
+			<td class="btn"><i class="material-icons closer" onclick="window.close()">close</i></td>
+			<td class="minimalize btn" onclick=""></td>
+			<td class="title-bar"></td>
+		</tr>
+	</table>
+	<div class="main">
+		<div class="play-controller">
+			<div class="toleft">
+				<i class="toleft-icon material-icons">chevron_left</i>
+			</div>
+			<div class="musicname">
+				<div id="title">雪降る町ヴェルタァァァァァァァァ</div>
+			</div>
+			<div class="toright">
+				<i class="toright-icon material-icons">chevron_right</i>
+			</div>
+		</div>
+		<div class="timerwrap">
+			<input type="range" id="timerange" value="100" min="0" max="200" data-unit="%">
+		</div>
+	</div>
+	<div class="time-numer">
+		<span id="time_over">1:21</span>/<span id="time_under">3:14</span>
+	</div>
+	<div id="playlist-container">
+		<div id="playlist-header"></div>
+		<div id="playlist">
+			<table id="playlist_table">
+				<thead>
+					<tr>
+						<th class="music-table-name">曲名</th>
+						<th class="music-table-path">パス</th>
+						<th class="music-table-length">長さ</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>雪降る街ヴェルタ</td>
+						<td>...\コロプラ\魔法使いと黒猫のウィズ 4th Anniversary Original Sou </td>
+						<td>3:14</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="playlist-footer"></div>
+	</div>
+	<div class="buttom-bar">
+		<div class="list-button-wrap">
+			<i class="material-icons" id="list-button">playlist_play</i>
+		</div>
+	</div>
+</body>
+</html>

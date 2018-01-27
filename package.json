@@ -1,0 +1,12 @@
+{
+  "name": "toivoa",
+  "version": "1.0.0",
+  "devDependencies": {
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
