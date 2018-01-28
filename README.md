@@ -1,4 +1,4 @@
-#Toivoa(トイボア)
+# Toivoa(トイボア)
 #### electron製オーディオプレイヤー
 <img src="./src/assets/toivoa.png" style="width:20%">  
 
