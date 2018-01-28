@@ -4,11 +4,17 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
-	<script src="./../script/animation.js"></script>
 	<script src="./../script/toivoa.js"></script>
+	<script src="./../script/animation.js"></script>
 	<title></title>
 </head>
 <body>
+	<div id="pause-button-wrapper">
+		<i class="material-icons" id="pause-button">pause_circle_outline</i>
+	</div>
+	<div id="play-button-wrapper" class="active">
+		<i class="material-icons active" id="play-button">play_circle_outline</i>
+	</div>
 	<table class="title">
 		<tr>
 			<td class="btn"><i class="material-icons closer" onclick="window.close()">close</i></td>
@@ -33,7 +39,7 @@
 		</div>
 	</div>
 	<div class="time-numer">
-		<span id="time_over">1:21</span>/<span id="time_under">3:14</span>
+		<span id="time_over">0:00</span>/<span id="time_under">0:00</span>
 	</div>
 	<div id="playlist-container">
 		<div id="playlist-header"></div>
@@ -46,12 +52,7 @@
 						<th class="music-table-length">長さ</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<td>雪降る街ヴェルタ</td>
-						<td>...\コロプラ\魔法使いと黒猫のウィズ 4th Anniversary Original Sou </td>
-						<td>3:14</td>
-					</tr>
+				<tbody id="playlist_tbody">
 				</tbody>
 			</table>
 		</div>
@@ -61,6 +62,8 @@
 		<div class="list-button-wrap">
 			<i class="material-icons" id="list-button">playlist_play</i>
 		</div>
+		<i id="recycle-button" class="material-icons">settings_backup_restore</i>
+		<i id="repeat-button" class="material-icons">repeat</i>
 	</div>
 </body>
 </html>

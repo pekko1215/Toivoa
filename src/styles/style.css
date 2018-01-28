@@ -102,6 +102,8 @@ body {
     width: 20%;
     display: table-cell;
     text-align: right;
+    z-index: 1;
+    position: relative;
 }
 
 .toleft-icon {
@@ -116,6 +118,7 @@ body {
     top: 32px;
     color: black;
     border-radius: 8px;
+    z-index: 1;
 }
 
 #title {
@@ -137,11 +140,13 @@ body {
     width: 20%;
     display: table-cell;
     font-size: 16px;
+    position: relative;
 }
 
 .toright-icon {
     color:#b55050;
     font-size: 50px;
+    z-index: 1;
 }
 
 .toleft-icon:hover {
@@ -157,12 +162,14 @@ body {
 .timerwrap {
     margin-left:5px;
     margin-right:5px;
+    z-index: 1;
 }
 
 #timerange {
     -webkit-appearance: none;
     margin: 14px 0;
     width: 100%;
+    position: relative;
 }
 
 #timerange:focus {
@@ -192,7 +199,6 @@ body {
 
 .buttom-bar{
     height: 30px;
-    position: absolute;
     width: 100%;
     bottom: 0;
 }
@@ -206,6 +212,7 @@ body {
     cursor: pointer;
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
 #list-button:hover:before{
@@ -227,6 +234,11 @@ body {
     text-align: center;
     color:gray;
     cursor: default;
+    z-index: 1;
+}
+
+.time-numer > *{
+    position: relative;
 }
 
 #play-controller{
@@ -239,6 +251,23 @@ body {
     border-spacing: 0;
     background-color:rgb(217, 254, 255);
 }
+
+#playlist-container.drag{
+    border-radius: 4px;
+    border:dashed 4pt #885555;
+    height: 229px;
+}
+
+#playlist-container.drag:before{
+    content: "library_add";
+    font-family: 'Material Icons';
+    color: #885555;
+    font-size: 140px;
+    position: absolute;
+    left: 27%;
+    top: 23%;
+}
+
 #playlist_table > tbody > tr > td{
     font-size:7pt;
     text-overflow: ellipsis;
@@ -254,6 +283,7 @@ body {
 
 #playlist_table > tbody{
     background-color:rgb(150, 206, 208);
+    cursor: pointer;
 }
 
 #playlist-container{
@@ -278,4 +308,102 @@ body {
 #playlist_table > tbody{
     overflow-x:hidden;
     overflow-y:scroll;
+}
+
+
+#pause-button{
+    font-size:126pt;
+    display: inline-block;
+    margin-top:-5px;
+    z-index: 0;
+}
+
+
+#pause-button-wrapper{
+    position: absolute;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: :10px;
+    top:10px;
+    left:10px;
+    text-align: center;
+    color:rgba(0,0,0,0);
+    z-index: 0;
+    cursor: pointer;
+}
+
+#pause-button-wrapper:hover{
+    color:#b3fff2;
+}
+
+#pause-button-wrapper.active{
+    pointer-events: none;
+}
+
+#pause-button.active{
+    transition: color 0.3s, font-size 0.3s;
+    transform: 0.3s;
+    font-size: 285pt;
+    color: rgba(0,0,0,0);
+    margin-top: -113px;
+    margin-left: -50px;
+    pointer-events: none;
+}
+
+#play-button{
+    font-size:126pt;
+    display: inline-block;
+    margin-top:-5px;
+    z-index: 0;
+}
+
+
+#play-button-wrapper{
+    position: absolute;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: :10px;
+    top:10px;
+    left:10px;
+    text-align: center;
+    color:rgba(0,0,0,0);
+    z-index: 0;
+    cursor: pointer;
+}
+
+#play-button-wrapper:hover{
+    color:#eeaaaa;
+}
+
+#play-button-wrapper.active{
+    pointer-events: none;
+}
+
+#play-button.active{
+    transition: color 0.3s, font-size 0.3s;
+    transform: 0.3s;
+    font-size: 285pt;
+    color: rgba(0,0,0,0);
+    margin-top: -113px;
+    margin-left: -50px;
+    pointer-events: none;
+}
+
+#recycle-button,#repeat-button{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    top:6px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#recycle-button:hover,#repeat-button:hover{
+    transition: color 0.3s;
+    color:green;
+}
+
+#recycle-button.active,#repeat-button.active{
+    background: #2f9e90;
+    border-radius: 3px;
 }
