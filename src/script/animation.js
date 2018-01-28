@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
         })
         $playButtonWrapper.addEventListener('click', () => {
             if (!isStop) { return };
-            if (MusicQueue.resume()) {
+            if (MusicQueue.resume()||MusicQueue.play()) {
                 $pauseButton.classList.toggle('active')
                 $pauseButtonWrapper.classList.toggle('active');
                 $playButton.classList.toggle('active')
@@ -106,6 +106,9 @@ window.addEventListener('load', () => {
 								var music = new Music();
 								music.loadByFile(file.path).then(()=>{
 									MusicQueue.enqueue(music)
+									if(!MusicQueue.current){
+										MusicQueue.play()
+									}
 								})
 							}
 						}

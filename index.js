@@ -29,7 +29,8 @@ app.on("ready", () => {
         width: 300,
         height: 160,
         frame:false,
-        "resizable": false
+        "resizable": false,
+        icon:__dirname+'/src/assert/favicon.ico'
     });
     //使用するhtmlファイルを指定する
     mainWindow.loadURL(`file://${__dirname}/src/views/main.html`);

@@ -100,6 +100,8 @@ MusicQueue.on('end',(music)=>{
 	}
 	if(window.repeat){
 		MusicQueue.loopFlag = true;
+	}else{
+		MusicQueue.loopFlag = false
 	}
 	MusicQueue.play();
 })
