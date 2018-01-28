@@ -1,8 +1,9 @@
 #Toivoa(トイボア)
 #### electron製オーディオプレイヤー
 <img src="./src/assets/toivoa.png" style="width:20%">  
-![スクショ1](./_image/1.png)  
-![スクショ2](./_image/2.png)  
+
+<img src="./_image/1.png">  
+<img src="./_image/2.png">  
 
 ## インストール
 ```
